@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "smelttouch",
+  "version": "${version}",
+  "name": "Smelt Touch",
+  "description": "The Smelt Touch enchantment causes block drops to be smelted when mined",
+  "authors": [
+    "SchitzPseudonym"
+  ],
+  "contact": {
+    "homepage": "https://modrinth.com/user/SchitzPseudonym",
+    "sources": "https://github.com/SchitzPseudonym"
+  },
+  "license": "CC BY 4.0",
+  "icon": "assets/smelttouch/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.schitzpseudonym.smelttouch.EntrypointServer"
+    ]
+  },
+  "mixins": ["smelttouch.mixins.json"],
+  "depends": {
+    "fabricloader": ">=0.15.11",
+    "minecraft": "~1.20.1",
+    "java": ">=17",
+    "fabric-api": "*"
+  },
+  "suggests": {
+    "modmenu": ">=7.1.0"
+  }
+}
