@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Optional;
 
 import com.schitzpseudonym.smelttouch.ModRegistry;
+import net.minecraft.recipe.RecipeEntry;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -35,16 +36,16 @@ public class BlockMixin {
 
         for (int i = 0; i < cirReturnValue.size(); i++) {
             ItemStack droppedItem = cirReturnValue.get(i);
-            Optional<SmeltingRecipe> recipe = world.getRecipeManager().listAllOfType(RecipeType.SMELTING).stream().filter((r -> r.getIngredients().get(0).test(droppedItem))).findFirst();
+            Optional<RecipeEntry<SmeltingRecipe>> recipe = world.getRecipeManager().listAllOfType(RecipeType.SMELTING).stream().filter((r -> r.value().getIngredients().get(0).test(droppedItem))).findFirst();
 
             // If there is a valid smelting recipe
             if(recipe.isPresent()) {
                 //getting the ItemStack output of the smelting recipe
-                ItemStack smeltedItem = recipe.get().getOutput(null); //null may need to be world.getRegistryManager()
+                ItemStack smeltedItem = recipe.get().value().getResult(null);
                 smeltedItem.setCount(droppedItem.getCount());
                 cirReturnValue.set(i, smeltedItem);
                 //Spawn recipe output XP
-                int expAmount = Math.round(recipe.get().getExperience());
+                int expAmount = Math.round(recipe.get().value().getExperience());
                 ExperienceOrbEntity.spawn(world, Vec3d.ofCenter(pos), expAmount);
             }
         }
