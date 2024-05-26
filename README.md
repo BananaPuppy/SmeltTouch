@@ -7,4 +7,4 @@ When it is applied, drops from blocks mined are automagically smelted!
 
 ### Feature Requests & Issues
 [GitHub Issue Tracker](https://github.com/BananaPuppy/VariantFurnaces/issues/new/choose)<br>
-[Discord](https://discord.gg/6fb4sQjQwk)
+[Discord](https://discord.gg/rWkXF7pbmG)
