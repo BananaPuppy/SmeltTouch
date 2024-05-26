@@ -4,7 +4,7 @@
 
 Adds the enchantment **Smelt Touch** for minecraft tools.<br>
 When it is applied, drops from blocks mined are automagically smelted!<br>
-Non-Vanilla furnace recipes are supported!<br>
+Modded furnace recipes, as well as digging tools, should be supported!<br>
 
 ### Feature Requests & Issues
 [GitHub Issue Tracker](https://github.com/BananaPuppy/VariantFurnaces/issues/new/choose)<br>
