@@ -11,6 +11,5 @@ public class ModRegistry {
 
     public static void onInitializeServer() {
         registerEnchantment("smelt_touch", smeltTouch);
-        //smeltTouch = registerEnchantment("smelting", smeltTouch);
     }
 }

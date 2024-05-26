@@ -3,7 +3,7 @@
   "id": "smelttouch",
   "version": "${version}",
   "name": "Smelt Touch",
-  "description": "The Smelt Touch enchantment causes block drops to be smelted when mined",
+  "description": "A smelting enchantment for your Minecraft tools!",
   "authors": [
     "SchitzPseudonym"
   ],
